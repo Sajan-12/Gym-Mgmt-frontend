@@ -35,11 +35,11 @@ const Sidebar = () => {
   return (
     <div className='w-1/4 h-[100vh] bg-black border-2 p-5 font-extralight'>
       <div className='text-center text-3xl text-white'>
-        MyGYM Center
+        {localStorage.getItem('gymName')}
       </div>
       <div className='flex gap-5 my-5  '>
-        <div className='h-[100px] w-[120px] rounded-3xl'>
-          <img className="w-full h-full rounded-3xl" src="https://get.pxhere.com/photo/woman-weights-physical-fitness-weight-training-shoulder-gym-exercise-equipment-arm-dumbbell-fitness-professional-muscle-strength-training-chin-exercise-bodybuilding-room-bodypump-chest-competition-event-personal-trainer-barbell-biceps-curl-sports-equipment-Strongwoman-crossfit-sports-training-abdomen-1604285.jpg" alt='icon'/>
+        <div className='h-[120px] w-[120px] rounded-3xl'>
+          <img className="w-full h-full rounded-3xl" src={localStorage.getItem('profilePic')} alt='icon'/>
         </div>
         <div className='flex-column justify-center align-middle'>
           <div className='text-white text-2xl'>{greeting}</div>
