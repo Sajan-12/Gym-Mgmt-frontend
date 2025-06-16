@@ -30,7 +30,7 @@ const Login = () => {
 
   return (
 
-        <div className='md:w-3/4 mr-20 p-10 mt-20 ml-20 bg-gray-50 bg-opacity-50 h-fit'>
+        <div className=' sm:w-3/4 md:w-1/3 mr-20 p-10 mt-20 ml-20 bg-gray-50 bg-opacity-50 h-fit'>
           <div className='font-sans text-white text-center text-3xl '>Login</div>
           <input type="email" value={loginField.email} onChange={(e)=>onChangeHandler(e,"email")} className='w-full my-10 p-2 rounded-lg' placeholder='Enter Email'/>
           <input type="password" value={loginField.password}  onChange={(e)=>onChangeHandler(e,"password")} className='w-full mb-10 p-2 rounded-lg' placeholder='Enter Password' />

@@ -102,7 +102,7 @@ const Dashboard = () => {
       </Link>
 
      </div>
-     <div className='w-full h-[120px] sm:h-fit md:w-3/4 p-3 bg-black text-white rounded-xl text-lg sm:text-xl text-center'>
+     <div className='w-full fixed bottom-0 sm:w-1/2  p-3 bg-black text-white rounded-xl text-lg sm:text-xl text-center'>
      Contact Developer for any Technical Error at +91 7482930412</div>
     </div>
   )

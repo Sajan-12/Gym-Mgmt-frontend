@@ -49,7 +49,7 @@ const Signup = () => {
     }
 
   return (
-    <div className='customSignup md:w-3/4 p-10 mb-40 mr-20 mt-20 ml-20 bg-gray-50 bg-opacity-50 h-[450px] overflow-auto'>
+    <div className='customSignup  sm:w-3/4 md:w-1/3 p-10 mb-40 mr-20 mt-20 ml-20 bg-gray-50 bg-opacity-50 h-[450px] overflow-auto'>
           <div className='font-sans text-white text-center text-3xl'>Register Your Gym</div>
           <input type="email" value={signupField.email} onChange={(e)=>onchangeHandler(e,"email")} className='w-full my-10 p-2 rounded-lg ' placeholder='Enter Email'/>
           <input type="text" value={signupField.gymName} onChange={(e)=>onchangeHandler(e,"gymName")} className='w-full mb-10 p-2 rounded-lg ' placeholder='Enter Gym Name'/>
