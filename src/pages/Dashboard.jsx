@@ -34,7 +34,7 @@ const Dashboard = () => {
   }
 
   return (
-    <div className='w-3/4 text-black p-5 relative'>
+    <div className=' w-full sm:w-3/4 text-black p-5  sm:py-0 relative'>
 
      <div className='w-full bg-slate-900 text-white rounded-lg p-3 flex justify-between items-center'>
      <MenuIcon onClick={()=>setDashboardpopup(prev=>!prev)} className='cursor-pointer'/>
@@ -47,7 +47,7 @@ const Dashboard = () => {
     </div>
      }
     
-     <div className='mt-5 pt-3 bg-slate-100 bg-opacity-50 grid gap-5 grid-cols-3 w-full pb-5 overflow-x-auto h-[80%]'>
+     <div className='mt-5 h-[80%] sm:h-fit pt-3 bg-slate-100 bg-opacity-50 grid gap-5 grid-cols-2 md:grid-cols-3 w-full p-5 overflow-x-auto'>
       <Link to='/member' className='w-full h-fit border-2 bg-white rounded-lg cursor-pointer'>
         <div className='h-3 rounded-t-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'></div>
         <div className='py-7 px-5 flex-col justify-center item-center w-full  text-center rounded-b-lg hover:bg-slate-900 hover:text-white'>
@@ -102,7 +102,7 @@ const Dashboard = () => {
       </Link>
 
      </div>
-     <div className='md:bottom-4 p-4 w-3/4 md:mb-0 absolute bg-black text-white mt-20 rounded-xl text-xl '>
+     <div className='w-full h-[120px] sm:h-fit md:w-3/4 p-3 bg-black text-white rounded-xl text-lg sm:text-xl text-center'>
      Contact Developer for any Technical Error at +91 7482930412</div>
     </div>
   )

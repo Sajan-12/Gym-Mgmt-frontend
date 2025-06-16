@@ -27,9 +27,10 @@ function App() {
     }
   },[localStorage.getItem("islogin")])
   return (
-    <div className='app flex'>
+    <div className='app flex flex-col sm:flex-row'>
       
       {islogin?<Sidebar/>:null}
+     
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/dashboard' element={<Dashboard/>}/>
@@ -37,6 +38,7 @@ function App() {
         <Route path='/specific/:page' element={<GeneralUser/>}/>
         <Route path='member/:id' element={<MemberDetail/>}/>
       </Routes>
+     
     </div>
   );
 }

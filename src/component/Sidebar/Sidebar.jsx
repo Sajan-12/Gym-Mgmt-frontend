@@ -33,7 +33,7 @@ const Sidebar = () => {
   },[]);
 
   return (
-    <div className='w-1/4 h-[100vh] bg-black border-2 p-5 font-extralight'>
+    <div className='w-full h-fit sm:w-1/4  sm:h-[100vh] bg-black border-2 p-5  font-extralight'>
       <div className='text-center text-3xl text-white'>
         {localStorage.getItem('gymName')}
       </div>
@@ -48,16 +48,16 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <div className='mt-10 py-10 border-t-2 border-gray-700'>
-        <Link to='/dashboard' className='flex items-center mt-5 gap-8 font-semibold text-xl text-white bg-slate-700 p-3 rounded-xl cursor-pointer hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:text-black '>
+      <div className='flex  gap-5 sm:flex-col mt-10 py-10 border-t-2 border-gray-700'>
+        <Link to='/dashboard' className='flex  md:gap-8 items-center mt-5 gap-1 font-semibold text-xl text-white bg-slate-700 p-3 rounded-xl cursor-pointer hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:text-black '>
           <div><HomeIcon /></div>
           <div>Dashboard</div>
         </Link>
-        <Link to='/member' className='flex items-center mt-5 gap-8 font-semibold text-xl text-white bg-slate-700 p-3 rounded-xl cursor-pointer hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:text-black'>
+        <Link to='/member' className='flex items-center mt-5 gap-1 md:gap-8 font-semibold text-xl text-white bg-slate-700 p-3 rounded-xl cursor-pointer hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:text-black'>
           <div><GroupIcon/></div>
           <div>Members</div>
         </Link>
-        <div onClick={()=>handleLogout()}  className='flex items-center mt-5 gap-8 font-semibold text-xl text-white bg-slate-700 p-3 rounded-xl cursor-pointer hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:text-black'>
+        <div onClick={()=>handleLogout()}  className='flex items-center md:gap-8 mt-5 gap-1 font-semibold text-xl text-white bg-slate-700 p-3 rounded-xl cursor-pointer hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:text-black'>
           <div><LogoutIcon /></div>
           <div>Logout</div>
         </div>

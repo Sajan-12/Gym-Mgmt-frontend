@@ -88,7 +88,7 @@ const AddMember = () => {
     },[])
 
   return (
-    <div className='text-black'>
+    <div className='text-black '>
       <div className='grid grid-cols-2 gap-5 text-lg'>
         <input value={formData.name} onChange={(e)=>handleChange(e,"name")} placeholder='Name of the Joinee' type='text' className='border-2 w-[90%] pl-3 pr-3 pt-2 pb-2 border-slate-400 rounded-md h-12'/>
          <input value={formData.mobileNo} onChange={(e)=>handleChange(e,"mobileNo")} placeholder='Mobile No.' type='tel' className='border-2 w-[90%] pl-3 pr-3 pt-2 pb-2 border-slate-400 rounded-md h-12'/>

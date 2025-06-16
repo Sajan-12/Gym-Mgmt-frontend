@@ -100,7 +100,7 @@ const Member = () => {
   },[currPage,skip])
 
   return (
-    <div className='w-3/4 text-black relative p-5'>
+    <div className='w-full sm:w-3/4  text-black relative p-5 sm:py-0'>
        {/*banner block*/}
       <div className='border-2 w-full bg-slate-900 text-white rounded-lg p-3 flex justify-between '>
         <div className='rounded-2xl text-white border-2 pr-3 pl-3 pt-1 pb-1 cursor-pointer hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:text-black' onClick={()=>handleAddMember()}>Add Member <FitnessCenterIcon/></div>
@@ -110,7 +110,7 @@ const Member = () => {
       <Link  to='/dashboard'><ArrowBackIcon/> Back to Dashboard</Link>
        
        {/*search bar*/}
-      <div className='mt-5 gap-2 w-1/2 flex'>
+      <div className='mt-5 gap-2 w-full md:w-1/2 flex'>
          <input type="text" value={query} onChange={(e)=>{setQuery(e.target.value)}} className='border-2 w-full p-2 rounded-lg' placeholder='Serach By Name or Mobile Number'/>
           <div onClick={()=>onSearchHandler()} className='bg-slate-900 p-3 border-2 text-white rounded-lg cursor-pointer hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:text-black '><SearchIcon/></div>
       </div>
@@ -126,7 +126,7 @@ const Member = () => {
           }
        </div>
 
-       <div className="bg-slate-100 p-5 mt-5 rounded-lg grid gap-2 grid-cols-3 overflow-x-auto h-[65%]">
+       <div className="bg-slate-100 sm:p-5 mt-5 rounded-lg grid gap-2 grid-cols-2 md:grid-cols-3 overflow-x-auto h-[65%]">
         {
           members.map((member)=>{
             return(

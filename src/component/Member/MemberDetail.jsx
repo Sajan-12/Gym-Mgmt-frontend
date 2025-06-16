@@ -79,16 +79,16 @@ const MemberDetail = () => {
   }
 
   return (
-    <div onClick={()=>{navigate(`/member/${id}`)}} className='w-3/4 text-black  p-5'>
+    <div onClick={()=>{navigate(`/member/${id}`)}} className='w-full sm:w-3/4 text-black  p-5'>
        <div onClick={() => navigate(-1)} className='border-2 w-fit text-xl font-sans text-white p-2 rounded-xl bg-slate-900 cursor-pointer'>
           <ArrowBackIcon/> Go Back 
        </div>
 
            <div className='w-[100%] h-fit flex mt-5 p-2 gap-2'>
-            <div className='w-1/3 mx-auto mt-7'>
+            <div className='w-1/2 sm:w-1/3 mx-auto mt-7'>
               <img className='h-[300px]'  src={member.profilePic} alt="picture" />
             </div>
-            <div className='w-2/3  text-xl p-5'>
+            <div className='w-1/2 sm:w-2/3 text-md sm:text-xl p-5'>
               <div className='mt-1 mb-2 text-2xl font-semibold'>Name : {member?.name}</div>
               <div className='mt-1 mb-2 text-2xl font-semibold'>Mobile No : {member?.mobileNo}</div>
               <div className='mt-1 mb-2 text-2xl font-semibold'>Address : {member?.address}</div>
@@ -101,10 +101,13 @@ const MemberDetail = () => {
              
               <div className='mt-1 mb-2 text-2xl font-semibold'>Status : <Switch onColor='#6366F1'   checked={status==='active'} onChange={()=>handleStatusChange()} /></div>
              
-             <div onClick={()=>setRenew(prev=>!prev)} className={`mt-1 rounded-lg p-3 border-2 border-slate-900 ${renew&&status==='active'?('bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'):null}w-full md:w-1/2  text-center cursor-pointer hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:text-black`}>Renew</div>
-            {
+             <div onClick={()=>setRenew(prev=>!prev)} className={`text-2xl font-semibold mt-1 rounded-lg p-3 border-2 border-slate-900 ${renew&&status==='active'?('bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'):null}w-full md:w-1/2  text-center cursor-pointer hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:text-black`}>Renew</div>
+            </div>
+            
+           </div>
+           {
               status==='active' && renew ? (
-                 <div className='rounded-lg p-3 mt-5 mb-5 h-fit bg-slate-50 w-[100%]'>
+             <div className='rounded-lg text-2xl font-semibold p-3 mt-5 mb-5 h-fit bg-slate-50 w-[100%]'>
               <h1>Membership</h1>
               <select value={selectedOptoinValue} onChange={(e)=>{setSelectedOtionValue(e.target.value)}} className='w-full mt-2 border-2 p-2 rounded-lg'>
                {
@@ -117,13 +120,9 @@ const MemberDetail = () => {
             </div>
               ):null
             }
-            </div>
-            
-           
-           </div>
            {
-             !renew&&<div className='w-2/3 h-fit flex justify-center text-xl mt-5 p-2 gap-20'>
-            <div onClick={()=>deleteMemberHandler()} className='mt-1 rounded-lg p-2 border-2 border-slate-900 w-full md:w-1/2 text-center cursor-pointer hover:bg-red-500 hover:text-black' >Delete</div>
+             !renew&&<div className='w-1/2  sm:w-2/3 h-fit flex justify-center text-xl mb-10 sm:mt-5 p-2 gap-20'>
+            <div onClick={()=>deleteMemberHandler()} className='mt-1 rounded-lg p-2 border-2 border-slate-900 w-full md:w-1/2 text-2xl font-semibold text-center cursor-pointer hover:bg-red-500 hover:text-black' >Delete</div>
            </div>
            }
            <ToastContainer/>
